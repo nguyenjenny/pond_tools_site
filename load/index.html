@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Load - pond_tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#load" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pond_tools" class="md-header__button md-logo" aria-label="pond_tools" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pond_tools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Load
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/nguyenjenny/pond_tools/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Getting Started
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../documentation/" class="md-tabs__link md-tabs__link--active">
+        Documentation
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        Examples
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pond_tools" class="md-nav__button md-logo" aria-label="pond_tools" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.ico" alt="logo">
+
+    </a>
+    pond_tools
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/nguyenjenny/pond_tools/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        Core
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Load
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Load
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load" class="md-nav__link">
+    pond_tools.load
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.drop_duplicate_ids" class="md-nav__link">
+    drop_duplicate_ids()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.get_duplicate_ids" class="md-nav__link">
+    get_duplicate_ids()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.load_data" class="md-nav__link">
+    load_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.load_subset" class="md-nav__link">
+    load_subset()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.merge_data" class="md-nav__link">
+    merge_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.print_duplicate_ids" class="md-nav__link">
+    print_duplicate_ids()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../measures/" class="md-nav__link">
+        Measures
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load" class="md-nav__link">
+    pond_tools.load
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.drop_duplicate_ids" class="md-nav__link">
+    drop_duplicate_ids()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.get_duplicate_ids" class="md-nav__link">
+    get_duplicate_ids()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.load_data" class="md-nav__link">
+    load_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.load_subset" class="md-nav__link">
+    load_subset()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.merge_data" class="md-nav__link">
+    merge_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pond_tools.load.print_duplicate_ids" class="md-nav__link">
+    print_duplicate_ids()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/nguyenjenny/pond_tools/edit/master/docs/load.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="load">Load</h1>
+
+
+  <div class="doc doc-object doc-module">
+
+<a id="pond_tools.load"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.drop_duplicate_ids" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">drop_duplicate_ids</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_col</span><span class="o">=</span><span class="s1">&#39;SUBJECT&#39;</span><span class="p">,</span> <span class="n">sort_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Drops duplicate ids by a set of criteria</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>id_col</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Name of ID column. Defaults to "SUBJECT".</p></td>
+        <td><code>&#39;SUBJECT&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>sort_col</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Name of column used to sort values. Defaults to None. If None, it will look at date columns with differences and pick the oldest or newest value.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>ascending</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to sort in ascending order (or descending if False). Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: DataFrame where duplicated IDs are dropped/</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@pf</span><span class="o">.</span><span class="n">register_dataframe_method</span>
+<span class="k">def</span> <span class="nf">drop_duplicate_ids</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
+    <span class="n">id_col</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SUBJECT&quot;</span><span class="p">,</span>
+    <span class="n">sort_col</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">ascending</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Drops duplicate ids by a set of criteria</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df (pd.DataFrame): DataFrame</span>
+<span class="sd">        id_col (Optional[str], optional): Name of ID column. Defaults to &quot;SUBJECT&quot;.</span>
+<span class="sd">        sort_col (Optional[str], optional): Name of column used to sort values. Defaults to None. If None, it will look at date columns with differences and pick the oldest or newest value.</span>
+<span class="sd">        ascending (Optional[bool], optional): Option to sort in ascending order (or descending if False). Defaults to True.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: DataFrame where duplicated IDs are dropped/</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+    <span class="n">vc</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">id_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="n">duplicate_subjects</span> <span class="o">=</span> <span class="p">(</span><span class="n">vc</span><span class="p">[</span><span class="n">vc</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">sort_col</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">sort_col</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="n">ascending</span><span class="p">)</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">id_col</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">indexes_to_drop</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">duplicate_subjects</span><span class="p">:</span>
+            <span class="n">df_subject</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">id_col</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">get_duplicate_columns</span><span class="p">(</span><span class="n">duplicate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="p">)</span>
+
+            <span class="n">df_subject_dates</span> <span class="o">=</span> <span class="n">df_subject</span><span class="o">.</span><span class="n">search_columns</span><span class="p">([</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;doc&quot;</span><span class="p">,</span> <span class="s2">&quot;instance&quot;</span><span class="p">])</span>
+            <span class="n">indexes_original</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">df_subject</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">())</span>
+            <span class="c1"># If no different date columns, keep instance with the least nulls</span>
+            <span class="k">if</span>  <span class="n">df_subject_dates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">df_subject_dates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span> <span class="mi">0</span><span class="p">:</span> 
+                <span class="n">keep</span> <span class="o">=</span> <span class="n">df_subject</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="c1"># If different date columns do exists, keep the earliest instance</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">keep</span> <span class="o">=</span> <span class="n">df_subject_dates</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">df_subject_dates</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="n">ascending</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">indexes_to_drop</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">indexes_original</span> <span class="o">-</span> <span class="nb">set</span><span class="p">([</span><span class="n">keep</span><span class="p">])))</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">indexes_to_drop</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">indexes_to_drop</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.get_duplicate_ids" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_duplicate_ids</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_col</span><span class="o">=</span><span class="s1">&#39;SUBJECT&#39;</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Returns dataframe of ID that are duplicated.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>id_col</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Name of subject column. Defaults to 'SUBJECT'.</p></td>
+        <td><code>&#39;SUBJECT&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: DataFrame with Duplicated IDs</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@pf</span><span class="o">.</span><span class="n">register_dataframe_method</span>
+<span class="k">def</span> <span class="nf">get_duplicate_ids</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> 
+    <span class="n">id_col</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SUBJECT&quot;</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns dataframe of ID that are duplicated.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df (pd.DataFrame): DataFrame</span>
+<span class="sd">        id_col (Optional[str], optional): Name of subject column. Defaults to &#39;SUBJECT&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: DataFrame with Duplicated IDs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">vc</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">id_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="n">duplicate_subjects</span> <span class="o">=</span> <span class="p">(</span><span class="n">vc</span><span class="p">[</span><span class="n">vc</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">duplicate_subjects</span>
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">id_col</span><span class="si">}</span><span class="s1">.isin(@duplicate_subjects)&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.load_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_data</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/cache/POND_Merged_Data.pkl&#39;</span><span class="p">),</span> <span class="n">measure_mappings</span><span class="o">=</span><span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/mapping/MeasureMappings.xlsx&#39;</span><span class="p">),</span> <span class="n">multicols</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop_9000</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">drop_999</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">iq</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cbcl</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">anxiety</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scq</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rbs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">demographics</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">geocode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cache_loocation</span><span class="o">=</span><span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/cache/LoadedCachedData.pkl&#39;</span><span class="p">))</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Reads a pond export or a pond export merged with additional files and returns a process DataFrame</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>filepath</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Filepath path of unprocessed/raw POND export. Defaults to MERGE_CACHE.</p></td>
+        <td><code>WindowsPath(&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/cache/POND_Merged_Data.pkl&#39;)</code></td>
+      </tr>
+      <tr>
+        <td><code>measure_mappings</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Measure mappings for multicolumn levels. Defaults to MEASURE_MAPPINGS.</p></td>
+        <td><code>WindowsPath(&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/mapping/MeasureMappings.xlsx&#39;)</code></td>
+      </tr>
+      <tr>
+        <td><code>multicols</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to have multilevel columns determined by the <code>measure_mappings</code>. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>drop_9000</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to to filter out columns with values over 9000. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>drop_999</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to to filter out columns with values over 999. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>iq</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process IQ data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>cbcl</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to processes CBCL data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>anxiety</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process Anxiety Data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>language</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process Language Data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>scq</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process SCQ Data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>rbs</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process RBS data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>demographics</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process Demographic Data. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>geocode</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to process Geocode Data (note that this takes quite a bit of time +5 minutes). Defaults to False.</p></td>
+        <td><code>False</code></td>
+      </tr>
+      <tr>
+        <td><code>cache</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to use cached data instead of re-running interprocessing script again. If `cache=False', the script will run again and the old cache will be overridden. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>cache_location</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Filepath of where to save and access cache. Defaults to LOAD_CACHE.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Processed DataFrame</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span>
+    <span class="n">filepath</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">MERGE_CACHE</span><span class="p">,</span>
+    <span class="n">measure_mappings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">MEASURE_MAPPINGS</span><span class="p">,</span>
+    <span class="n">multicols</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">drop_9000</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">drop_999</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">iq</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">cbcl</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">anxiety</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">language</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">scq</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">rbs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">demographics</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">geocode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">cache</span><span class="p">:</span>  <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">cache_loocation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">LOAD_CACHE</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads a pond export or a pond export merged with additional files and returns a process DataFrame</span>
+<span class="sd">    Args:</span>
+<span class="sd">        filepath (Optional[str], optional): Filepath path of unprocessed/raw POND export. Defaults to MERGE_CACHE.</span>
+<span class="sd">        measure_mappings (Optional[str], optional): Measure mappings for multicolumn levels. Defaults to MEASURE_MAPPINGS.</span>
+<span class="sd">        multicols (Optional[bool], optional): Option to have multilevel columns determined by the `measure_mappings`. Defaults to True.</span>
+<span class="sd">        drop_9000 (Optional[bool], optional): Option to to filter out columns with values over 9000. Defaults to True.</span>
+<span class="sd">        drop_999 (Optional[bool], optional): Option to to filter out columns with values over 999. Defaults to True.</span>
+<span class="sd">        iq (Optional[bool], optional): Option to process IQ data. Defaults to True.</span>
+<span class="sd">        cbcl (Optional[bool], optional): Option to processes CBCL data. Defaults to True.</span>
+<span class="sd">        anxiety (Optional[bool], optional): Option to process Anxiety Data. Defaults to True.</span>
+<span class="sd">        language (Optional[bool], optional): Option to process Language Data. Defaults to True.</span>
+<span class="sd">        scq (Optional[bool], optional): Option to process SCQ Data. Defaults to True.</span>
+<span class="sd">        rbs (Optional[bool], optional): Option to process RBS data. Defaults to True.</span>
+<span class="sd">        demographics (Optional[bool], optional): Option to process Demographic Data. Defaults to True.</span>
+<span class="sd">        geocode (Optional[bool], optional): Option to process Geocode Data (note that this takes quite a bit of time +5 minutes). Defaults to False.</span>
+<span class="sd">        cache (Optional[bool], optional): Option to use cached data instead of re-running interprocessing script again. If `cache=False&#39;, the script will run again and the old cache will be overridden. Defaults to True.</span>
+<span class="sd">        cache_location (Optional[str], optional): Filepath of where to save and access cache. Defaults to LOAD_CACHE.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Processed DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Load data from cache</span>
+    <span class="c1">##########################################################</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">cache</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">read_general</span><span class="p">(</span><span class="n">cache_loocation</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cache does not exit. Set cache=False to create cache.&#39;</span><span class="p">)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Load data from file</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># Import pond data</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">read_general</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Dropping unnecessary columns and filtering invalid values</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># Drop unnecessary columns</span>
+    <span class="k">if</span> <span class="s2">&quot;Unnamed: 0&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Unnamed: 0&quot;</span><span class="p">])</span>
+
+    <span class="c1"># Remove the non-numeric values</span>
+
+    <span class="k">if</span> <span class="s1">&#39;ANXIETYTOTAL&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ANXIETYTOTAL&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ANXIETYTOTAL&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">_find_floats</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ANXIETYTOTAL&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;ANXIETYTOTAL&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">900</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;ANXIETYTOTAL&quot;</span><span class="p">])</span>
+
+
+    <span class="c1"># Drop missing data code is 9000+</span>
+    <span class="k">if</span> <span class="n">drop_9000</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">DROP_9000</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter_columns</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">DROP_9000</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">9000</span><span class="p">,</span> <span class="n">comparison</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="n">old</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+                <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">old</span> <span class="o">&gt;</span> <span class="mi">9000</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">old</span><span class="p">)</span>
+
+    <span class="c1"># Change string column to numeric</span>
+    <span class="k">if</span> <span class="s2">&quot;SA_TSCORE&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;SA_TSCORE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SA_TSCORE&quot;</span><span class="p">])</span>
+
+    <span class="c1"># Drop missing data code is 999+</span>
+    <span class="k">if</span> <span class="n">drop_999</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter_columns</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="n">DROP_999</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">999</span><span class="p">,</span> <span class="n">comparison</span><span class="o">=</span><span class="s1">&#39;&gt;=&#39;</span><span class="p">,</span> <span class="n">replacement</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="c1"># for col in DROP_999:</span>
+        <span class="c1">#     if col in df.columns:</span>
+        <span class="c1">#         old = df[col]</span>
+        <span class="c1">#         df[col] = np.where(old &gt;= 999, np.nan, old)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Add extra measure-specific columns</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># IQ</span>
+    <span class="k">if</span> <span class="n">iq</span><span class="p">:</span>
+        <span class="c1"># Combine differend IQ measures</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">combine_iq</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+        <span class="c1"># Calculate IQ gap</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;IQ_GAP&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;PERF_IQ&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;VERB_IQ&quot;</span><span class="p">]</span>
+
+    <span class="c1"># CBCL</span>
+    <span class="k">if</span> <span class="n">cbcl</span><span class="p">:</span>
+        <span class="c1"># Combine CBCL (0-6 and 6-18)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">combine_cbcl</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># Anxiety Measures</span>
+    <span class="k">if</span> <span class="n">anxiety</span><span class="p">:</span>
+        <span class="c1"># Combine anxiety measures (Spence, RCADS)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">combine_anxiety</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># Language</span>
+    <span class="k">if</span> <span class="n">language</span><span class="p">:</span>
+        <span class="c1"># Combine language measures (OWLS, PLS)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">combine_language</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># SCQ</span>
+    <span class="k">if</span> <span class="n">scq</span><span class="p">:</span>       
+        <span class="c1"># Calculate SCQ subdomains</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_scq_subdomains</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># RBS</span>
+    <span class="k">if</span> <span class="n">rbs</span><span class="p">:</span>
+        <span class="c1"># Calculate RBS-R Subscales</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_rbs_subscales</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># Demographics</span>
+    <span class="k">if</span> <span class="n">demographics</span><span class="p">:</span>
+        <span class="c1"># Add columns relating to co-occurring ASD, ADHD, OCD and TD Diagnoses</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_diagnoses_columns</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+        <span class="c1"># Adds sum, max, min and mean columns to combine CAREGIVER 1 and 2 demographic data.</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_combine_cargiver_columns</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># Geocode</span>
+    <span class="k">if</span> <span class="n">geocode</span><span class="p">:</span>
+        <span class="c1"># Adds geocode data. Determines based on postal code what public health unit participant belongs in. Also merges census data.</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">add_geocode_columns</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Rename columns</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># Rename sex/gender columns</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span>
+        <span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;SEX&quot;</span><span class="p">:</span> <span class="s2">&quot;SEX_DEMO&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;NSI_SEX&quot;</span><span class="p">:</span> <span class="s2">&quot;SEX&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;SEX_STD&quot;</span><span class="p">:</span> <span class="s2">&quot;SEX_DEMO_STD&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;NSI_SEX_STD&quot;</span><span class="p">:</span> <span class="s2">&quot;SEX_STD&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">ETHNICITY_MAPPING</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Drop Duplicates</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># Drop Exact Duplicates</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+
+    <span class="c1"># Drop duplicates from multiple RCADS test</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">drop_duplicate_ids</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Create multi-level columns</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="k">if</span> <span class="n">multicols</span><span class="p">:</span>
+        <span class="c1"># Get dataframe columns</span>
+        <span class="n">df_columns</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;Field&quot;</span><span class="p">})</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Get dictionary with category mappings</span>
+        <span class="n">measure_mapping_dict</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">read_general</span><span class="p">(</span><span class="n">measure_mappings</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Catergory&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Field&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Field&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">to_dict</span><span class="p">()[</span><span class="s2">&quot;Catergory&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Categorize fields and replace columns with multi-index</span>
+        <span class="n">df_columns</span><span class="p">[</span><span class="s2">&quot;Category&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">measure_mapping_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">measure_mapping_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;None&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df_columns</span><span class="p">[</span><span class="s2">&quot;Field&quot;</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_frame</span><span class="p">(</span><span class="n">df_columns</span><span class="p">[[</span><span class="s2">&quot;Category&quot;</span><span class="p">,</span> <span class="s2">&quot;Field&quot;</span><span class="p">]])</span>
+
+        <span class="c1"># Set index to participant number</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Index&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Participant_Data&quot;</span><span class="p">][</span><span class="s2">&quot;SUBJECT&quot;</span><span class="p">]</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Index&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Index&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;SUBJECT&quot;</span><span class="p">]</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Index&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1">##########################################################</span>
+    <span class="c1"># Save to cache if running data</span>
+    <span class="c1">##########################################################</span>
+
+    <span class="c1"># Save df as cache</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">cache_loocation</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.load_subset" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">load_subset</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Participant_Data&#39;</span><span class="p">,</span> <span class="s1">&#39;SCQ&#39;</span><span class="p">,</span> <span class="s1">&#39;IQ_Summary&#39;</span><span class="p">],</span> <span class="n">filepath</span><span class="o">=</span><span class="s1">&#39;DATA_FILEPATH&#39;</span><span class="p">,</span> <span class="n">field_cat</span><span class="o">=</span><span class="s1">&#39;FIELD_CAT&#39;</span><span class="p">,</span> <span class="n">drop_upper_level</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Reads and loads a melted dataframe with specied columns.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>filepath</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Filepath to excel file.</p></td>
+        <td><code>&#39;DATA_FILEPATH&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>field_cat</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Excel file with categorization of fields.</p></td>
+        <td><code>&#39;FIELD_CAT&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Loaded DataFrame</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_subset</span><span class="p">(</span>
+    <span class="n">subset</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Participant_Data&quot;</span><span class="p">,</span> <span class="s2">&quot;SCQ&quot;</span><span class="p">,</span> <span class="s2">&quot;IQ_Summary&quot;</span><span class="p">],</span>
+    <span class="n">filepath</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;DATA_FILEPATH&quot;</span><span class="p">,</span>
+    <span class="n">field_cat</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FIELD_CAT&quot;</span><span class="p">,</span>
+    <span class="n">drop_upper_level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">cache</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads and loads a melted dataframe with specied columns.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        filepath: Filepath to excel file.</span>
+<span class="sd">        field_cat: Excel file with categorization of fields.</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Loaded DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">field_cat</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">subset</span><span class="p">]</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="s2">&quot;Category&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.merge_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">merge_data</span><span class="p">(</span><span class="n">pond_export</span><span class="p">,</span> <span class="n">extra_files</span><span class="o">=</span><span class="p">[],</span> <span class="n">merge_extras</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">save_location</span><span class="o">=</span><span class="n">WindowsPath</span><span class="p">(</span><span class="s1">&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/cache/POND_Merged_Data.pkl&#39;</span><span class="p">),</span> <span class="n">convert_datetime</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">merge_col</span><span class="o">=</span><span class="s1">&#39;Subject&#39;</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Merge official pond export with extra files (typically unofficial exports)</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>pond_export</code></td>
+        <td><code>str</code></td>
+        <td><p>Filepath of the official POND export</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>extra_files</code></td>
+        <td><code>List[str]</code></td>
+        <td><p>List of filepath(s) of the extra files (e.g., unofficial POND exports you want to merge with)</p></td>
+        <td><code>[]</code></td>
+      </tr>
+      <tr>
+        <td><code>merge_extras</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to merge extra files. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>save</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to save file with the cache in pond_tool module. Defaults to False.</p></td>
+        <td><code>False</code></td>
+      </tr>
+      <tr>
+        <td><code>save_location</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Filepath to where you want to save merged file. Defaults to MERGE_CACHE.</p></td>
+        <td><code>WindowsPath(&#39;C:/Users/nguye/Documents/Thesis/pond_tools/pond_tools/resources/cache/POND_Merged_Data.pkl&#39;)</code></td>
+      </tr>
+      <tr>
+        <td><code>convert_datetime</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Option to convert columns to datetime type. Defaults to True.</p></td>
+        <td><code>True</code></td>
+      </tr>
+      <tr>
+        <td><code>merge_col</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Name of index/subject column that your extra files are merging to. Defaults to 'Subject'.</p></td>
+        <td><code>&#39;Subject&#39;</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>DataFrame</code></td>
+      <td><p>pd.DataFrame: Merged DataFrame</p></td>
+    </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">merge_data</span><span class="p">(</span>
+    <span class="n">pond_export</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">extra_files</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="n">merge_extras</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">save</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">save_location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">MERGE_CACHE</span><span class="p">,</span>
+    <span class="n">convert_datetime</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">merge_col</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Subject&quot;</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Merge official pond export with extra files (typically unofficial exports)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pond_export (str): Filepath of the official POND export</span>
+<span class="sd">        extra_files (List[str]): List of filepath(s) of the extra files (e.g., unofficial POND exports you want to merge with)</span>
+<span class="sd">        merge_extras (Optional[bool], optional): Option to merge extra files. Defaults to True.</span>
+<span class="sd">        save (Optional[bool], optional): Option to save file with the cache in pond_tool module. Defaults to False.</span>
+<span class="sd">        save_location (Optional[str], optional): Filepath to where you want to save merged file. Defaults to MERGE_CACHE.</span>
+<span class="sd">        convert_datetime (Optional[bool], optional): Option to convert columns to datetime type. Defaults to True.</span>
+<span class="sd">        merge_col (Optional[str], optional): Name of index/subject column that your extra files are merging to. Defaults to &#39;Subject&#39;.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: Merged DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Load pond export</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">read_general</span><span class="p">(</span><span class="n">pond_export</span><span class="p">)</span>
+
+    <span class="c1"># Merge extra files</span>
+    <span class="k">if</span> <span class="n">merge_extras</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">extra_files</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">extra_files</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">extra_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">extra_files</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">extra_files</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">df_file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">df_file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+                <span class="n">df_file</span><span class="p">,</span>
+                <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span>
+                <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;SUBJECT&quot;</span><span class="p">,</span>
+                <span class="n">right_on</span><span class="o">=</span><span class="n">merge_col</span><span class="p">,</span>
+                <span class="n">suffixes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+            <span class="p">)</span>
+
+    <span class="c1"># Convert datetime columns</span>
+    <span class="k">if</span> <span class="n">convert_datetime</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">convert_datetime_cols</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="c1"># Save file in cache</span>
+    <span class="k">if</span> <span class="n">save</span><span class="p">:</span>
+        <span class="c1"># tdate = datetime.today().strftime(&quot;%Y-%m-%d&quot;)</span>
+        <span class="c1"># df.to_pickle(get_filepath(fr&quot;cache/{tdate}-POND_Merged_Data.pkl&quot;))</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-function">
+
+
+
+<h2 id="pond_tools.load.print_duplicate_ids" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">print_duplicate_ids</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">id_col</span><span class="o">=</span><span class="s1">&#39;SUBJECT&#39;</span><span class="p">,</span> <span class="n">return_indexes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+
+</h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Prints the Subject with duplicates IDs along with dates or instances that are different</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>df</code></td>
+        <td><code>DataFrame</code></td>
+        <td><p>DataFrame</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>id_col</code></td>
+        <td><code>Optional[str]</code></td>
+        <td><p>Name of subject column. Defaults to 'SUBJECT'.</p></td>
+        <td><code>&#39;SUBJECT&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>return_indexes</code></td>
+        <td><code>Optional[bool]</code></td>
+        <td><p>Return indexes of duplicated ids/subjects</p></td>
+        <td><code>True</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>pond_tools\load.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="nd">@pf</span><span class="o">.</span><span class="n">register_dataframe_method</span>
+<span class="k">def</span> <span class="nf">print_duplicate_ids</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> 
+    <span class="n">id_col</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SUBJECT&quot;</span><span class="p">,</span>
+    <span class="n">return_indexes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prints the Subject with duplicates IDs along with dates or instances that are different</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        df (pd.DataFrame): DataFrame</span>
+<span class="sd">        id_col (Optional[str], optional): Name of subject column. Defaults to &#39;SUBJECT&#39;.</span>
+<span class="sd">        return_indexes (Optional[bool], optional): Return indexes of duplicated ids/subjects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">vc</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">id_col</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+    <span class="n">duplicate_subjects</span> <span class="o">=</span> <span class="p">(</span><span class="n">vc</span><span class="p">[</span><span class="n">vc</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">subject</span> <span class="ow">in</span> <span class="n">duplicate_subjects</span><span class="p">:</span>
+        <span class="n">df_subject</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">id_col</span><span class="si">}</span><span class="s2"> == </span><span class="si">{</span><span class="n">subject</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">get_duplicate_columns</span><span class="p">(</span>
+            <span class="n">duplicate</span><span class="o">=</span><span class="kc">False</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">subject</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">df_subject</span><span class="o">.</span><span class="n">search_columns</span><span class="p">([</span><span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;doc&quot;</span><span class="p">,</span> <span class="s2">&quot;instance&quot;</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_indexes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">duplicate_subjects</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../core/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Core
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../measures/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Measures
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>
