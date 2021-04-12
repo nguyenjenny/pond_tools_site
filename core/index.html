@@ -14,7 +14,7 @@
     
     
       
-        <title>Core - pond_tools</title>
+        <title>Core - pondtools</title>
       
     
     
@@ -76,7 +76,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="pond_tools" class="md-header__button md-logo" aria-label="pond_tools" data-md-component="logo">
+    <a href=".." title="pondtools" class="md-header__button md-logo" aria-label="pondtools" data-md-component="logo">
       
   <img src="../assets/images/favicon.ico" alt="logo">
 
@@ -88,7 +88,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            pond_tools
+            pondtools
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../examples/" class="md-tabs__link">
+      <a href="../QuickStart/" class="md-tabs__link">
         Examples
       </a>
     </li>
@@ -225,12 +225,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="pond_tools" class="md-nav__button md-logo" aria-label="pond_tools" data-md-component="logo">
+    <a href=".." title="pondtools" class="md-nav__button md-logo" aria-label="pondtools" data-md-component="logo">
       
   <img src="../assets/images/favicon.ico" alt="logo">
 
     </a>
-    pond_tools
+    pondtools
   </label>
   
     <div class="md-nav__source">
@@ -337,28 +337,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core" class="md-nav__link">
-    pond_tools.core
+  <a href="#pondtools.core" class="md-nav__link">
+    pondtools.core
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.combine_measures" class="md-nav__link">
+  <a href="#pondtools.core.combine_measures" class="md-nav__link">
     combine_measures()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.combine_measures_single" class="md-nav__link">
+  <a href="#pondtools.core.combine_measures_single" class="md-nav__link">
     combine_measures_single()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.get_filepath" class="md-nav__link">
+  <a href="#pondtools.core.get_filepath" class="md-nav__link">
     get_filepath()
   </a>
   
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../QuickStart/" class="md-nav__link">
         Examples
       </a>
     </li>
@@ -469,28 +469,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core" class="md-nav__link">
-    pond_tools.core
+  <a href="#pondtools.core" class="md-nav__link">
+    pondtools.core
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.combine_measures" class="md-nav__link">
+  <a href="#pondtools.core.combine_measures" class="md-nav__link">
     combine_measures()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.combine_measures_single" class="md-nav__link">
+  <a href="#pondtools.core.combine_measures_single" class="md-nav__link">
     combine_measures_single()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pond_tools.core.get_filepath" class="md-nav__link">
+  <a href="#pondtools.core.get_filepath" class="md-nav__link">
     get_filepath()
   </a>
   
@@ -518,7 +518,7 @@
 
   <div class="doc doc-object doc-module">
 
-<a id="pond_tools.core"></a>
+<a id="pondtools.core"></a>
     <div class="doc doc-contents first">
 
 
@@ -537,7 +537,7 @@
 
 
 
-<h2 id="pond_tools.core.combine_measures" class="doc doc-heading">
+<h2 id="pondtools.core.combine_measures" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">combine_measures</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_map</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;SUBJECT&#39;</span><span class="p">,</span> <span class="n">measure_prefix</span><span class="o">=</span><span class="s1">&#39;CBCL&#39;</span><span class="p">,</span> <span class="n">sort_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_duplicates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
@@ -588,7 +588,7 @@
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>pond_tools\core.py</code></summary>
+          <summary>Source code in <code>pondtools\core.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">combine_measures</span><span class="p">(</span>
     <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
     <span class="n">df_map</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
@@ -654,7 +654,7 @@
 
 
 
-<h2 id="pond_tools.core.combine_measures_single" class="doc doc-heading">
+<h2 id="pondtools.core.combine_measures_single" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">combine_measures_single</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">new_field</span><span class="p">,</span> <span class="n">old_fields</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;SUBJECT&#39;</span><span class="p">)</span></code>
 
 
@@ -711,7 +711,7 @@
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>pond_tools\core.py</code></summary>
+          <summary>Source code in <code>pondtools\core.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">combine_measures_single</span><span class="p">(</span>
     <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">new_field</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">old_fields</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">index_col</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;SUBJECT&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -751,7 +751,7 @@
 
 
 
-<h2 id="pond_tools.core.get_filepath" class="doc doc-heading">
+<h2 id="pondtools.core.get_filepath" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">get_filepath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></code>
 
 
@@ -759,7 +759,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Get filepath of the data/resources stored in the pond_tools module</p>
+      <p>Get filepath of the data/resources stored in the pondtools module</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -796,10 +796,10 @@
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>pond_tools\core.py</code></summary>
+          <summary>Source code in <code>pondtools\core.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_filepath</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get filepath of the data/resources stored in the pond_tools module</span>
+<span class="sd">    Get filepath of the data/resources stored in the pondtools module</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        filename (str): Name of filename</span>
@@ -807,7 +807,7 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        str: Path of the file</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">files</span><span class="p">(</span><span class="s2">&quot;pond_tools.resources&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">files</span><span class="p">(</span><span class="s2">&quot;pondtools.resources&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
